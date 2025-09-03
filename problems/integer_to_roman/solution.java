@@ -1,0 +1,58 @@
+class Solution {
+    public String intToRoman(int n) {
+        String s = "";
+        while(n>=1000){
+            n=n-1000;
+            s=s+"M";
+        }
+        if(n>=900){
+            n=n-900;
+            s=s+"CM";
+        }
+        if(n>=500){
+            n=n-500;
+            s+="D";
+        }
+        if(n>=400){
+            n=n-400;
+            s=s+"CD";
+        }
+        while(n>=100){
+            n=n-100;
+            s=s+"C";
+        }
+        if(n>=90){
+            n=n-90;
+            s=s+"XC";
+        }
+        if(n>=50){
+            n=n-50;
+            s=s+"L";
+        }
+        if(n>=40){
+            n=n-40;
+            s=s+"XL";
+        }
+        while(n>=10){
+            n=n-10;
+            s=s+"X";
+        }
+        if(n==9){
+            n=n-9;
+            s=s+"IX";
+        }
+        if(n>=5){
+            n=n-5;
+            s=s+"V";
+        }
+        if(n==4){
+            n=n-4;
+            s=s+"IV";
+        } 
+        while(n>=1){
+            n=n-1;
+            s+="I";
+        }
+        return s;
+    }
+}
